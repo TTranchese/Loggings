@@ -1,0 +1,16 @@
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+logging:
+  file:
+    path: myCustomLogs/
+  level:
+    com:
+      example:
+        Loggings:
+          services: DEBUG
+    root: INFO
+customVar:
+  n1: 2
+  n2: 8
