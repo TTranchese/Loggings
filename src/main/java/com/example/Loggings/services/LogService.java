@@ -12,9 +12,8 @@ public class LogService {
 	public int n1;
 	@Value("${customVar.n2}")
 	public int n2;
-	public Logger logger = LoggerFactory.getLogger(Controller.class);
 	
 	public int powerExponent() {
-		return (int)Math.pow(n1, n2);
+		return (int) Math.pow(n1, n2);
 	}
 }
