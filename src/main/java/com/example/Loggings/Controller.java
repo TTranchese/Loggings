@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Controller {
-	public Logger logger = LoggerFactory.getLogger(Controller.class);
+	private final Logger logger = LoggerFactory.getLogger(Controller.class);
 	@Autowired
 	private LogService logService;
 	
@@ -23,10 +23,7 @@ public class Controller {
 	@GetMapping("/exp")
 	public String twoValues() {
 		logger.info("Starting");
-		String str = "The power of "
-				+ logService.n1 + " to "
-				+ logService.n2 + " is "
-				+ logService.powerExponent();
+		String str = logService.powerExponent();
 		logger.info("Ending");
 		return str;
 	}
